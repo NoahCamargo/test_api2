@@ -5,7 +5,7 @@ module TestApi2
     class InstallGenerator < Rails::Generators::Base
       def create_rake_task
         rakefile "test_api.rake" do
-          File.open("#{File.expand_path(__dir__)}/../tasks/test_api2.rake").reduce { |a, c| a.to_s + c.to_s }
+          File.open("#{File.expand_path(__dir__)}/../../../tasks/test_api2.rake").reduce { |a, c| a.to_s + c.to_s }
         end
       end
     end
