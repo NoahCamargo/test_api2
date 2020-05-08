@@ -14,7 +14,7 @@ module TestApi2
       end
 
       def copy_example_file
-        template 'example.yml', '/test_api2/api_json.yml'
+        template 'example.yml', 'test_api2/api_json.yml'
       end
     end
   end
