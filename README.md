@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'test_api2'
+gem 'test_api2', github: 'NoahCamargo/test_api2'
 ```
 
 And then execute:
@@ -20,9 +20,18 @@ Or install it yourself as:
 
     $ gem install test_api2
 
+Install gem:
+
+    $ rails g test_api2:install
+
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem, two files are generated. A rake task and `test_api2/api_json.yml. Just write your API in this file and execute the command:
+
+    $ rake test_api2:start # your server test will be started
+This command allows you to pass the server port:
+
+    $ rake test_api2:start[8000] # Default is 3000
 
 ## Development
 

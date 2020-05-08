@@ -2,7 +2,7 @@ module TestApi2
   class Server
     class << self
       def start port = 3000
-        root = File.expand_path Rails.root.join('/test_api2/api_json.yml')
+        root = Rails.root.join('test_api2/api_json.yml')
         collection = ApiDataCollection.new(YAML.load_file(root))
 
         server = WEBrick::HTTPServer.new :Port => port
