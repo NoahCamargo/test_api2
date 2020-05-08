@@ -1,0 +1,41 @@
+example:
+  params:
+    - test
+  success:
+    body: >
+      {
+        "success": 0
+      }
+    headers:
+      Example: 3
+  error:
+    body: >
+      {
+        "error": 1
+      }
+other-example:
+  method: POST
+  success:
+    body: >
+      {
+        "Boa": 123
+      }
+  error:
+    body: >
+      {
+        "example": 1
+      }
+example/ID:
+  headers:
+    Example: 1
+  success:
+    body: >
+      {
+        "example": 1
+      }
+  error:
+    body: >
+      {
+        "example": 1
+      }
+      
