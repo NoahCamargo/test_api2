@@ -33,6 +33,10 @@ This command allows you to pass the server port:
 
     $ rake test_api2:start[8000] # Default is 3000
 
+Run with Docker Compose:
+
+    $ docker-compose run --service-ports web rake test_api2:start
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
