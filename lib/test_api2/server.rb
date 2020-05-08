@@ -1,15 +1,8 @@
-# require_relative 'lib/api_data_collection'
-# require 'webrick'
-# require 'yaml'
-# require 'json'
-
-# ruby fake_api/server_test.rb
-
 module TestApi2
   class Server
     class << self
       def start
-        root = File.expand_path 'api_json.yml'
+        root = File.expand_path Rails.root.join('/test_api2/api_json.yml')
         collection = ApiDataCollection.new(YAML.load_file(root))
 
         server = WEBrick::HTTPServer.new :Port => 8000
