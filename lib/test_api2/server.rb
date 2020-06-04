@@ -31,6 +31,7 @@ module TestApi2
         response['Allow'] = 'POST, PUT, DELETE, GET, OPTIONS'
         response['Access-Control-Allow-Origin'] = '*'
         response['Access-Control-Allow-Methods'] = '*'
+        response['Access-Control-Allow-Headers'] = '*'
       end
 
       def parse_body body
