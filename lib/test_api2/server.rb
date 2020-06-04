@@ -5,7 +5,10 @@ module TestApi2
         root = Rails.root.join('test_api2/api_json.yml')
         collection = ApiDataCollection.new(YAML.load_file(root))
 
-        server = WEBrick::HTTPServer.new Port: port, RequestCallback: Proc.new { |req,res| res['Access-Control-Allow-Origin'] = '*' }
+        server = WEBrick::HTTPServer.new Port: port, RequestCallback: Proc.new do |request, response|
+          request['Access-Control-Allow-Origin'] = '*'
+          request['Access-Control-Allow-Methods'] = '*'
+        end
 
         server.mount_proc '/' do |request, response|
           next response.status = 404 unless api_data = collection.get_data(request)
