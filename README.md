@@ -35,7 +35,7 @@ This command allows you to pass the server port:
 
 Run with Docker Compose:
 
-    $ docker-compose run --service-ports web rake test_api2:start
+    $ docker-compose run --rm --service-ports web rake test_api2:start
 
 ## Development
 
